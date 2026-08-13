@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Achados do Mercado Livre — grupo gratuito no WhatsApp</title>
+<meta name="description" content="Grupo gratuito no WhatsApp com achados e promoções do Mercado Livre: ferramenta, tech, som, treino e coisas pra casa.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Descubra os melhores achados do Mercado Livre">
+<meta property="og:description" content="Grupo gratuito no WhatsApp. Entrada livre, saída livre.">
+<meta property="og:locale" content="pt_BR">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0B0B0D;
+    --card:#17171A;
+    --card-2:#1F1F23;
+    --line:#2A2A2F;
+    --white:#FFFFFF;
+    --muted:#9A9AA3;
+    --amber:#F5A524;
+    --green:#22C55E;
+    --green-2:#16A34A;
+    --sans:"Inter", system-ui, -apple-system, sans-serif;
+  }
+
+  *,*::before,*::after{ box-sizing:border-box; }
+  html{ -webkit-text-size-adjust:100%; }
+
+  body{
+    margin:0;
+    background:var(--bg);
+    color:var(--white);
+    font-family:var(--sans);
+    font-size:15px;
+    line-height:1.5;
+    -webkit-font-smoothing:antialiased;
+    padding-bottom:92px;
+  }
+
+  .page{
+    width:100%;
+    max-width:420px;
+    margin:0 auto;
+    padding:30px 20px 28px;
+    text-align:center;
+  }
+
+  /* ---------- topo ---------- */
+  .crown{
+    width:82px; height:82px;
+    margin:0 auto 20px;
+    border-radius:50%;
+    display:grid; place-items:center;
+    font-size:34px;
+    background:radial-gradient(circle at 50% 35%, #2B2B31, #131316);
+    border:1px solid var(--line);
+    box-shadow:0 0 0 6px rgba(245,165,36,.06);
+  }
+
+  h1{
+    margin:0;
+    font-size:clamp(21px, 5.8vw, 25px);
+    line-height:1.28;
+    font-weight:800;
+    letter-spacing:-.02em;
+  }
+
+  .vip{
+    display:inline-flex; align-items:center; gap:7px;
+    margin-top:16px;
+    font-size:13.5px;
+    font-weight:600;
+    color:var(--amber);
+  }
+
+  /* ---------- botão ---------- */
+  .cta{
+    display:flex; align-items:center; justify-content:center; gap:9px;
+    width:100%;
+    margin-top:22px;
+    padding:19px 16px;
+    border-radius:12px;
+    background:linear-gradient(180deg, var(--green) 0%, var(--green-2) 100%);
+    color:#04240F;
+    font-size:clamp(14.5px, 4.1vw, 16.5px);
+    font-weight:800;
+    letter-spacing:.02em;
+    white-space:nowrap;
+    text-decoration:none;
+    box-shadow:0 0 0 1px rgba(255,255,255,.14) inset, 0 10px 28px -10px rgba(34,197,94,.75);
+    transition:transform .16s ease, filter .16s ease;
+  }
+  .cta:hover{ filter:brightness(1.07); transform:translateY(-2px); }
+  .cta:active{ transform:translateY(0); }
+  .cta:focus-visible{ outline:3px solid var(--amber); outline-offset:3px; }
+  .cta svg{ width:19px; height:19px; flex:none; }
+
+  /* ---------- selo de vagas ---------- */
+  .slots{
+    display:inline-flex; align-items:center; gap:9px;
+    margin-top:18px;
+    padding:11px 20px;
+    border:1px solid #3A2F1A;
+    border-radius:11px;
+    background:linear-gradient(180deg, #221B10, #171310);
+    font-size:14px;
+    font-weight:600;
+    color:#E8DCC6;
+  }
+  .slots b{ color:var(--amber); font-weight:800; }
+
+  /* ---------- seção ---------- */
+  .kicker{
+    margin:34px 0 16px;
+    font-size:12.5px;
+    font-weight:800;
+    letter-spacing:.09em;
+    text-transform:uppercase;
+    color:var(--amber);
+  }
+
+  .cards{ display:grid; gap:10px; text-align:left; }
+
+  .card{
+    display:flex; gap:13px;
+    padding:14px 15px;
+    background:var(--card);
+    border:1px solid var(--line);
+    border-radius:12px;
+  }
+  .ico{
+    width:38px; height:38px; flex:none;
+    border-radius:10px;
+    display:grid; place-items:center;
+    font-size:19px;
+    background:var(--card-2);
+    border:1px solid var(--line);
+  }
+  .card h3{
+    margin:1px 0 3px;
+    font-size:15px;
+    font-weight:700;
+    letter-spacing:-.01em;
+  }
+  .card p{
+    margin:0;
+    font-size:13px;
+    line-height:1.45;
+    color:var(--muted);
+  }
+
+  /* ---------- confiança ---------- */
+  .verified{
+    display:inline-flex; align-items:center; gap:8px;
+    margin-top:26px;
+    font-size:12.5px;
+    color:var(--muted);
+  }
+  .verified svg{ width:14px; height:14px; }
+
+  /* ---------- barra de vagas ---------- */
+  .limit{ margin-top:26px; }
+  .limit p{
+    margin:0 0 9px;
+    font-size:11.5px;
+    color:var(--muted);
+  }
+  .limit p b{ color:#E0DAD0; font-weight:600; }
+  .track{
+    height:5px;
+    border-radius:99px;
+    background:#232327;
+    overflow:hidden;
+  }
+  .fill{
+    height:100%;
+    width:78%;
+    border-radius:99px;
+    background:linear-gradient(90deg, var(--amber), #E4572E);
+  }
+
+  footer{
+    margin-top:30px;
+    padding-top:20px;
+    border-top:1px solid var(--line);
+  }
+  footer p{
+    margin:0;
+    font-size:10.5px;
+    line-height:1.8;
+    color:#5F5F68;
+  }
+
+  /* ---------- barra fixa ---------- */
+  .bar{
+    position:fixed; left:0; right:0; bottom:0; z-index:30;
+    background:rgba(11,11,13,.92);
+    backdrop-filter:blur(12px);
+    border-top:1px solid var(--line);
+    padding:12px 20px calc(12px + env(safe-area-inset-bottom));
+    transform:translateY(130%);
+    transition:transform .28s ease;
+  }
+  .bar.show{ transform:none; }
+  .bar .cta{ margin:0 auto; max-width:380px; padding:16px 16px; }
+
+  @media (prefers-reduced-motion:reduce){
+    *{ animation:none !important; transition:none !important; }
+  }
+</style>
+</head>
+<body>
+
+<main class="page">
+
+  <div class="crown">🛒</div>
+
+  <h1>Descubra os melhores achados do Mercado Livre e economize de verdade</h1>
+
+  <div class="vip">👑 Grupo gratuito, sem mensalidade</div>
+
+  <a class="cta" href="https://chat.whatsapp.com/ChCoIV0MMomAdSQ5WLAg8j" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.02s.87 2.34.99 2.5c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    ENTRAR NO GRUPO GRATUITO
+  </a>
+
+  <div class="slots">⏱️ <b>Vagas limitadas</b> · garanta a sua</div>
+
+  <p class="kicker">No grupo você vai encontrar:</p>
+
+  <div class="cards">
+    <article class="card">
+      <div class="ico">👖</div>
+      <div>
+        <h3>Roupa masculina</h3>
+        <p>Calça, camiseta, bermuda, tênis e jaqueta de marca com preço bem abaixo do normal.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ico">🎧</div>
+      <div>
+        <h3>Descontos de até 70%</h3>
+        <p>Fone, caixa de som, teclado, mouse e smartwatch de marca que presta, pela metade.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ico">🎟️</div>
+      <div>
+        <h3>Cupons e relâmpago</h3>
+        <p>Cupom que some rápido e oferta de poucas horas, postada assim que aparece.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ico">🏠</div>
+      <div>
+        <h3>Coisas pra sua casa</h3>
+        <p>Cozinha, garagem, churrasco, acessório de carro e moto — o que homem realmente usa.</p>
+      </div>
+    </article>
+
+    <article class="card">
+      <div class="ico">📦</div>
+      <div>
+        <h3>Links todo dia</h3>
+        <p>Achado novo diariamente, direto no link oficial do Mercado Livre.</p>
+      </div>
+    </article>
+  </div>
+
+  <div class="verified">
+    <svg viewBox="0 0 16 16" fill="none" stroke="#22C55E" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M8 1.5 13.5 4v4c0 3.2-2.3 5.7-5.5 6.5C4.8 13.7 2.5 11.2 2.5 8V4L8 1.5Z"/><path d="M5.8 8.1 7.3 9.6l3-3.2"/></svg>
+    Grupo fechado · só o admin publica
+  </div>
+
+  <div class="limit">
+    <p>⚠️ <b>Vagas limitadas</b> · o WhatsApp permite no máximo 1.024 pessoas por grupo</p>
+    <div class="track"><div class="fill"></div></div>
+  </div>
+
+</main>
+
+<div class="bar" id="bar">
+  <a class="cta" href="https://chat.whatsapp.com/ChCoIV0MMomAdSQ5WLAg8j" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2 22l5.25-1.38a9.9 9.9 0 0 0 4.79 1.22h.01c5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.82 9.82 0 0 0 12.04 2Zm0 18.15h-.01a8.2 8.2 0 0 1-4.19-1.15l-.3-.18-3.12.82.83-3.04-.2-.31a8.19 8.19 0 0 1-1.26-4.38c0-4.54 3.7-8.24 8.25-8.24 2.2 0 4.27.86 5.83 2.42a8.19 8.19 0 0 1 2.41 5.83c0 4.54-3.7 8.23-8.24 8.23Zm4.52-6.16c-.25-.12-1.47-.72-1.69-.81-.23-.08-.39-.12-.56.13-.16.24-.64.8-.79.97-.14.16-.29.19-.54.06-.25-.12-1.05-.39-1.99-1.23-.74-.66-1.23-1.47-1.38-1.72-.14-.25-.01-.38.11-.5.11-.11.25-.29.37-.43.13-.15.17-.25.25-.41.08-.17.04-.31-.02-.43-.06-.12-.56-1.34-.76-1.84-.2-.48-.4-.42-.56-.43h-.48c-.16 0-.43.06-.65.31-.22.25-.85.83-.85 2.02s.87 2.34.99 2.5c.12.16 1.71 2.61 4.14 3.66.58.25 1.03.4 1.38.51.58.19 1.11.16 1.53.1.47-.07 1.47-.6 1.68-1.18.21-.58.21-1.07.14-1.18-.06-.11-.22-.17-.47-.29Z"/></svg>
+    ENTRAR NO GRUPO GRATUITO
+  </a>
+</div>
+
+<script>
+(function(){
+  var bar = document.getElementById('bar');
+  var main = document.querySelector('.page > .cta');
+  if (bar && main && 'IntersectionObserver' in window) {
+    new IntersectionObserver(function(entries){
+      entries.forEach(function(e){ bar.classList.toggle('show', !e.isIntersecting); });
+    }, { threshold: 0 }).observe(main);
+  }
+})();
+</script>
+</body>
+</html>
