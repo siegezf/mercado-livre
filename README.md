@@ -30,7 +30,7 @@ git init
 git add .
 git commit -m "landing page do grupo de achados"
 git branch -M main
-git remote add origin https://github.com/SEU-USUARIO/SEU-REPO.git
+git remote add origin https://siegezf.github.io
 git push -u origin main
 ```
 
